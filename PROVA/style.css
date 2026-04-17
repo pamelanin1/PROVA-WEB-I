@@ -1,0 +1,88 @@
+:root {
+    --bg-dark: #121212;
+    --card-bg: #1e1e24;
+    --primary: #4ecca3;
+    --text-main: #eeeeee;
+    --text-muted: #888888;
+}
+
+
+* {
+    font-family: 'Arial', Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    margin: 0;
+}
+
+.container { width: 90%; max-width: 500px; }
+header { text-align: center; margin-bottom: 30px; }
+header h1 { color: var(--primary); margin-bottom: 5px; }
+
+.task-app {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.task-form { display: flex; gap: 10px; margin-bottom: 25px; }
+
+input {
+    flex: 1; padding: 12px; border: none; border-radius: 6px;
+    background: #2a2a35; color: white; font-size: 16px; outline: none;
+}
+
+button#btn-add {
+    padding: 12px 20px; border: none; border-radius: 6px;
+    background: var(--primary); color: #121212;
+    cursor: pointer; transition: 0.3s;
+    
+    
+    font-size: 16px;       
+    font-weight: 600;      
+}
+
+button#btn-add:hover {
+    background: #45b38f;
+}
+
+ul { list-style: none; padding: 0; margin: 0; }
+
+li {
+    background: #2a2a35; padding: 15px; margin-bottom: 10px;
+    border-radius: 6px; cursor: pointer; transition: 0.3s;
+    display: flex; justify-content: space-between; align-items: center;
+}
+
+li:hover { background: #363645; }
+
+.task-text { flex: 1; word-break: break-word; margin-right: 10px; }
+
+.actions { display: flex; gap: 6px; }
+
+.btn-edit, .btn-delete {
+    padding: 8px 12px; font-size: 14px;
+    background: #363645; color: white; border: none;
+    border-radius: 4px; cursor: pointer;
+}
+
+.btn-edit:hover { background: #ffa000; }
+.btn-delete:hover { background: #d32f2f; }
+
+.concluded {
+    text-decoration: line-through;
+    color: var(--text-muted);
+    opacity: 0.6;
+}
+
+.stats {
+    margin-top: 30px; padding-top: 15px; border-top: 1px solid #333;
+    display: flex; justify-content: space-between; font-size: 0.9em;
+    color: var(--text-muted);
+}
